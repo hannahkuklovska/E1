@@ -17,4 +17,10 @@ double mta_odmocnina(int m, double x) // mta odmocnina z x
           printf("Chyba: nultá odmocnina z čísla.");
           return -1;
      }
+
+     if (x < 0 && m % 2 == 0)
+     {
+          printf("Chyba: párna odmocnina zo zaporného čísla.\n");
+          return -1;
+     }
 }
