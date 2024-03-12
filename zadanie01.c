@@ -3,11 +3,13 @@
 #define tol 0.0001                      // presnost na 4 desatinne miesta
 #define abs(n) (((n) < 0) ? -(n) : (n)) // absolútna hodnota funkcia
 
+double mta_odmocnina(int m, double x);
+
 int main(void)
 {
      double x;
      int m;
-
+     printf("%lf", mta_odmocnina(3, 8));
      return 0;
 }
 
@@ -25,12 +27,12 @@ double mta_odmocnina(int m, double x) // mta odmocnina z x
           return -1;
      }
 
-     for (int i = 0; i < 10000; i += tol)
+     double vysledok = x / m;
+     while (abs(mocnina(vysledok, m) - x) > tol)
+          ;
      {
-          double pomoc = abs(i * i - x);
-          if (pomoc == 0)
-          {
-               break;
-          }
+          vysledok -= tol;
      }
+
+     return vysledok;
 }
