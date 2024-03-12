@@ -4,6 +4,7 @@
 #define abs(n) (((n) < 0) ? -(n) : (n)) // absolútna hodnota funkcia
 
 double mta_odmocnina(int m, double x);
+double mocnina(double mocnenec, double exponent);
 
 int main(void)
 {
@@ -27,12 +28,16 @@ double mta_odmocnina(int m, double x) // mta odmocnina z x
           return -1;
      }
 
-     double vysledok = x / m;
-     while (abs(mocnina(vysledok, m) - x) > tol)
+     double vysledok = x / (double)m;
+     while (abs(mocnina(m, vysledok) - x) > tol)
           ;
      {
           vysledok -= tol;
      }
 
      return vysledok;
+}
+
+double mocnina(double mocnenec, double exponent)
+{
 }
