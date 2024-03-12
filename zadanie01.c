@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-#define tol 0.0001 // presnost na 4 desatinne miesta
+#define tol 0.0001                      // presnost na 4 desatinne miesta
+#define abs(n) (((n) < 0) ? -(n) : (n)) // absolútna hodnota funkcia
 
 int main(void)
 {
