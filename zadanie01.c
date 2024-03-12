@@ -24,4 +24,13 @@ double mta_odmocnina(int m, double x) // mta odmocnina z x
           printf("Chyba: párna odmocnina zo zaporného čísla.\n");
           return -1;
      }
+
+     for (int i = 0; i < 10000; i += tol)
+     {
+          double pomoc = abs(i * i - x);
+          if (pomoc == 0)
+          {
+               break;
+          }
+     }
 }
