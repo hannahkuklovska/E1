@@ -5,16 +5,6 @@
 #define OK 1
 #define FAIL 0
 
-double mta_odmocnina(int m, double x, double *res);
-double mocnina(double mocnenec, double exponent);
-
-int main(void)
-{
-     double x;
-     int m;
-     return OK;
-}
-
 double mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
      if (m == 0)
@@ -39,4 +29,11 @@ double mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 
 double mocnina(double mocnenec, double exponent)
 {
+}
+
+int main(void)
+{
+     double x;
+     int m;
+     return (0);
 }
