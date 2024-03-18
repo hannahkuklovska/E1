@@ -19,7 +19,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           vysledok -= TOL;
      }
 
-     return vysledok;
+     return OK;
 }
 
 double mocnina(double mocnenec, double exponent)
