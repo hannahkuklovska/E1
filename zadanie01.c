@@ -5,7 +5,7 @@
 #define OK 1
 #define FAIL 0
 
-double mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
+char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
      if (m == 0)
      {
@@ -37,7 +37,7 @@ int main(void)
      int m = 3;
      double res;
 
-     int navrat = m_taodmocnina(m, x, &res);
+     int navrat = mta_odmocnina(m, x, &res);
 
      if (navrat == OK)
      {
