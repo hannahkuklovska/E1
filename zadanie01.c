@@ -5,6 +5,8 @@
 #define OK 1
 #define FAIL 0
 
+double mocnina(double mocnenec, double exponent);
+
 char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
      if (x < 0 && m % 2 == 0 || m == 0)
