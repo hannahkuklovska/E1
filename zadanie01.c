@@ -12,12 +12,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           return FAIL;
      }
 
-     double vysledok = x / (double)m;
-     while (abs(mocnina(m, vysledok) - x) > TOL)
-          ;
-     {
-          vysledok -= TOL;
-     }
+     *res = mocnina(x, 1.0 / m);
 
      return OK;
 }
