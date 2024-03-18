@@ -14,7 +14,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           return FAIL;
      }
 
-     *res = mocnina(x, 1.0 / m);
+     *res = mocnina(x, -m);
 
      return OK;
 }
@@ -41,10 +41,10 @@ double mocnina(double mocnenec, double exponent)
 int main(void)
 {
      double x = 4;
-     int m = 2;
+     int m = -2;
      double res;
 
-     printf("%.4f\n", mocnina(x, 2));
+     printf("%.4f\n", mocnina(x, -3));
 
      int navrat = mta_odmocnina(m, x, &res);
 
