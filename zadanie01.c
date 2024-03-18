@@ -33,7 +33,11 @@ double mocnina(double mocnenec, double exponent)
 
 int main(void)
 {
-     double x;
-     int m;
+     double x = 8;
+     int m = 3;
+     double res;
+
+     int vysledok = m_taodmocnina(m, x, &res);
+
      return (0);
 }
