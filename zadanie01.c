@@ -32,7 +32,7 @@ double mocnina(double mocnenec, double exponent)
      double vysledok = 1.0;
 
      if (exponent == 0)
-          return 1.0;
+          vysledok = 1.0;
      else if (exponent < 0)
      {
           exponent = -exponent;
@@ -43,6 +43,8 @@ double mocnina(double mocnenec, double exponent)
           vysledok *= mocnenec;
           exponent--;
      }
+
+     return vysledok;
 }
 
 int main(void)
