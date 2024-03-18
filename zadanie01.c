@@ -33,16 +33,18 @@ double mocnina(double mocnenec, double exponent)
      for (int i = 0; i < exponent; ++i)
      {
           vysledok *= mocnenec;
-          }
+     }
 
      return vysledok;
 }
 
 int main(void)
 {
-     double x = 8;
-     int m = 3;
+     double x = 4;
+     int m = 2;
      double res;
+
+     printf("%.4f\n", mocnina(x, 2));
 
      int navrat = mta_odmocnina(m, x, &res);
 
