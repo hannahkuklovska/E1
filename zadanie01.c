@@ -7,12 +7,7 @@
 
 char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
-     if (m == 0)
-     {
-          return FAIL;
-     }
-
-     if (x < 0 && m % 2 == 0)
+     if (x < 0 && m % 2 == 0 || m == 0)
      {
           return FAIL;
      }
