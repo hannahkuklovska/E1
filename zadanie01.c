@@ -30,9 +30,12 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 double mocnina(double mocnenec, double exponent)
 {
      if (exponent == 0)
-          return 1;
-     else if (exponent < 0)       // mocnina(mocnenec, -exponent)
-          else if (exponent == 1) // mocnina(mocnenec, 1)
+          return 1.0;
+     else if (exponent < 0)
+          exponent = -exponent;
+     mocnenec = 1.0 / mocnenec;
+     else if (exponent == 1) return mocnenec;
+     else return mocnenec *
 }
 
 int main(void)
