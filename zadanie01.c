@@ -24,17 +24,16 @@ double mocnina(double mocnenec, double exponent)
      double vysledok = 1.0;
 
      if (exponent == 0)
-          vysledok = 1.0;
+          return 1.0;
      else if (exponent < 0)
      {
           exponent = -exponent;
           mocnenec = 1.0 / mocnenec;
      }
-     while (exponent > 0)
+     for (int i = 0; i < exponent; ++i)
      {
           vysledok *= mocnenec;
-          exponent--;
-     }
+          }
 
      return vysledok;
 }
