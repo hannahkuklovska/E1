@@ -37,7 +37,16 @@ int main(void)
      int m = 3;
      double res;
 
-     int vysledok = m_taodmocnina(m, x, &res);
+     int navrat = m_taodmocnina(m, x, &res);
+
+     if (navrat == OK)
+     {
+          printf("Výsledok: %.4f\n", res);
+     }
+     else
+     {
+          printf("Chyba: Nie je možné vypočítať odmocninu");
+     }
 
      return (0);
 }
