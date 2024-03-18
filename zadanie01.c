@@ -16,7 +16,7 @@ int main(void)
      return 0;
 }
 
-double mta_odmocnina(int m, double x) // mta odmocnina z x
+double mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
      if (m == 0)
      {
