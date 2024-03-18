@@ -1,7 +1,9 @@
 #include <stdio.h>
 
-#define tol 0.0001                      // presnost na 4 desatinne miesta
+#define TOL 0.0001                      // presnost na 4 desatinne miesta
 #define abs(n) (((n) < 0) ? -(n) : (n)) // absolútna hodnota funkcia
+#define OK 1
+#define FAIL 0
 
 double mta_odmocnina(int m, double x);
 double mocnina(double mocnenec, double exponent);
