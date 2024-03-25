@@ -21,12 +21,11 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 
 double mocnina(double mocnenec, double exponent)
 {
-     double moc_res = 1.0;
 
      if (exponent == 0)
           return 1.0;
 
-     double moc_res;
+     double moc_res = 1.0;
 
      if (exponent > 0)
      {
