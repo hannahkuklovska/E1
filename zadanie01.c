@@ -35,11 +35,15 @@ double mocnina(double mocnenec, double exponent)
                moc_res *= mocnenec;
           }
      }
-     for (int i = 0; i < exponent; ++i)
-     {
-          moc_res *= mocnenec;
-     }
 
+     else
+     {
+          exponent = -exponent;
+          for (int i = 0; i < exponent; ++i)
+          {
+               moc_res *= (1.0 / mocnenec);
+          }
+     }
      return moc_res;
 }
 
