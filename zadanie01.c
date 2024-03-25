@@ -22,7 +22,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 double mocnina(double mocnenec, double exponent)
 {
 
-     if (exponent == 0 && mocnenec == 1.0)
+     if (exponent == 0 || mocnenec == 1.0)
           return 1.0;
 
      double moc_res = 1.0;
@@ -35,12 +35,13 @@ double mocnina(double mocnenec, double exponent)
           }
      }
 
-     else
+     else if (exponent < 0)
      {
-          exponent = abs(exponent);
+          exponent = -exponent;
+          mocnenec = 1.0 / mocnenec;
           for (int i = 0; i < exponent; ++i)
           {
-               moc_res *= (1.0 / mocnenec);
+               moc_res *= mocnenec;
           }
      }
 
@@ -53,8 +54,8 @@ int main(void)
      int m = 16;
      double res, moc_res;
 
-     printf("%.4f\n", mocnina(x, 3));
-     printf("%.4f\n", mocnina(8, 1.0 / 3.0));
+     printf("%.4f\n", mocnina(5, 2));
+     printf("%.4f\n", mocnina(25, 1.0 / 2));
 
      int navrat = mta_odmocnina(m, x, &res);
 
