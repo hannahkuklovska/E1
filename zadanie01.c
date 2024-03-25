@@ -43,6 +43,7 @@ double mocnina(double mocnenec, double exponent)
                moc_res *= (1.0 / mocnenec);
           }
      }
+
      return moc_res;
 }
 
