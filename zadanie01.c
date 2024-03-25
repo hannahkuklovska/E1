@@ -28,10 +28,12 @@ double mocnina(double mocnenec, double exponent)
 
      double moc_res;
 
-     else if (exponent < 0)
+     if (exponent > 0)
      {
-          exponent = (-exponent);
-          mocnenec = 1.0 / (double)mocnenec;
+          for (int i = 0; i < exponent; ++i)
+          {
+               moc_res *= mocnenec;
+          }
      }
      for (int i = 0; i < exponent; ++i)
      {
