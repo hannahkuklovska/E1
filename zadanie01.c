@@ -5,46 +5,45 @@
 #define OK 1
 #define FAIL 0
 
-char mocnina(double mocnenec, double exponent);
+char mocnina(double mocnenec, double exponent, double *moc_res);
 
 char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
+     double moc_res;
      if (x < 0 && m % 2 == 0 || m == 0)
      {
           return FAIL;
      }
 
-     *res = mocnina(x, -m);
+     *res = mocnina(x, -m, &moc_res);
 
      return OK;
 }
 
-char mocnina(double *mocnenec, double *exponent, double *moc_res)
+char mocnina(double mocnenec, double exponent, double *moc_res)
 {
      *moc_res = 1.0;
 
      if (exponent == 0)
-          return 1.0;
+          *moc_res = 1.0;
      else if (exponent < 0)
      {
-          exponent = -exponent;
+          exponent = (-exponent);
           mocnenec = 1.0 / mocnenec;
      }
      for (int i = 0; i < exponent; ++i)
      {
-          vysledok *= mocnenec;
+          *moc_res *= mocnenec;
      }
-
-     return vysledok;
 }
 
 int main(void)
 {
      double x = 4;
      int m = -2;
-     double res;
+     double res, moc_res;
 
-     printf("%.4f\n", mocnina(x, -3));
+     printf("%.4f\n", mocnina(x, -3, &moc_res));
 
      int navrat = mta_odmocnina(m, x, &res);
 
