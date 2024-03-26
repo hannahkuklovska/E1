@@ -25,11 +25,16 @@ double mocnina(double mocnenec, double exponent)
      if (exponent == 0 || mocnenec == 1.0)
           return 1.0;
 
+     if (exponent != (int)exponent)
+     {
+          double zvysok = exponent - (int)exponent;
+     }
+
      double moc_res = 1.0;
 
      if (exponent > 0)
      {
-          for (int i = 0; i < exponent; ++i)
+          for (double i = 0; i < exponent; i = i + TOL)
           {
                moc_res *= mocnenec;
           }
