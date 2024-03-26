@@ -29,6 +29,9 @@ double mocnina(double mocnenec, double exponent)
      {
           double zvysok = exponent - (int)exponent;
           double umocnenie_int = mocnina(mocnenec, (int)exponent);
+          double pomoc = 1.0;
+
+          for (int i = 1; pomoc > TOL; i++)
      }
 
      double moc_res = 1.0;
