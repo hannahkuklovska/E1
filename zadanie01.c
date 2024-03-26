@@ -28,6 +28,7 @@ double mocnina(double mocnenec, double exponent)
      if (exponent != (int)exponent)
      {
           double zvysok = exponent - (int)exponent;
+          double umocnenie_int = mocnina(mocnenec, (int)exponent);
      }
 
      double moc_res = 1.0;
