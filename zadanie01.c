@@ -34,25 +34,17 @@ double mocnina(double mocnenec, double exponent)
           }
      }
 
-     if (exponent > 0)
-     {
-          for (double i = 0; i < exponent; i = i + TOL)
-          {
-               moc_re *= mocnenec;
-          }
-     }
-
      else if (exponent < 0)
      {
           exponent = -exponent;
           mocnenec = 1.0 / mocnenec;
           for (int i = 0; i < exponent; ++i)
           {
-               moc_res *= mocnenec;
+               mocnina_res *= mocnenec;
           }
      }
 
-     return moc_res;
+     return mocnina_res;
 }
 
 int main(void)
