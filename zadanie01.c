@@ -14,7 +14,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           return FAIL;
      }
 
-     *res = mocnina(x, 1.0 / (double)m);
+     *res = mocnina(x, -m);
 
      return OK;
 }
@@ -25,22 +25,20 @@ double mocnina(double mocnenec, double exponent)
      if (exponent == 0 || mocnenec == 1.0)
           return 1.0;
 
-     if (exponent != (int)exponent)
+     double mocnina_res = 1.0;
+     if (exponent > 0)
      {
-          double zvysok = exponent - (int)exponent;
-          double umocnenie_int = mocnina(mocnenec, (int)exponent);
-          double pomoc = 1.0;
-
-          for (int i = 1; pomoc > TOL; i++)
+          for (int i = 0; i < exponent; i++)
+          {
+               mocnina_res *= mocnenec;
+          }
      }
-
-     double moc_res = 1.0;
 
      if (exponent > 0)
      {
           for (double i = 0; i < exponent; i = i + TOL)
           {
-               moc_res *= mocnenec;
+               moc_re *= mocnenec;
           }
      }
 
