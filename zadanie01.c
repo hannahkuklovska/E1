@@ -18,6 +18,10 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           *res = 1.0;
 
      double pomoc = x / m;
+     do
+     {
+
+     } while (abs(mocnina(pomoc, m) - x) > TOL);
 
      return OK;
 }
