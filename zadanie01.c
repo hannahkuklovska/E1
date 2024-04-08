@@ -15,7 +15,9 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
      }
 
      else if (m == 1)
+     {
           *res = 1.0;
+     }
 
      double pomoc = x / m;
      do
