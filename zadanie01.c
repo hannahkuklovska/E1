@@ -17,13 +17,15 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
      else if (m == 1)
      {
           *res = 1.0;
+          return OK;
      }
 
-     double pomoc = x / m;
+     double odhad = x / m;
      do
      {
+          double dalsi_odhad = odhad - (mocnina(odhad, m) - x) / (m * mocnina(guess, m - 1));
 
-     } while (abs(mocnina(pomoc, m) - x) > TOL);
+     } while (abs(mocnina(odhad, m) - x) > TOL);
 
      return OK;
 }
