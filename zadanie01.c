@@ -23,7 +23,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
      double odhad = x / m;
      do
      {
-          double dalsi_odhad = odhad - (mocnina(odhad, m) - x) / (m * mocnina(guess, m - 1));
+          double dalsi_odhad = odhad - (mocnina(odhad, m) - x) / (m * mocnina(odhad, m - 1));
 
      } while (abs(mocnina(odhad, m) - x) > TOL);
 
