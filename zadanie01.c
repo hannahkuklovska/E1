@@ -20,11 +20,11 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           return OK;
      }
 
-     double odhad = x / m;
+     double odhad = 1.0;
      double dalsi_odhad;
      do
      {
-          dalsi_odhad = odhad - (mocnina(odhad, m) - x) / (m * mocnina(odhad, m - 1));
+          dalsi_odhad = ((m - 1) * odhad + x / mocnina(odhad, m - 1)) / m;
           odhad = dalsi_odhad;
 
      } while (abs(mocnina(odhad, m) - x) >= TOL);
@@ -67,7 +67,7 @@ int main(void)
      double res;
 
      printf("%.4f\n", mocnina(5, 2));
-     printf("%.4f\n", mta_odmocnina(25, 2, &res));
+     // printf("%.4f\n", mta_odmocnina(25, 2, &res));
 
      int navrat = mta_odmocnina(m, x, &res);
 
