@@ -63,7 +63,7 @@ double mocnina(double mocnenec, double exponent)
 
 int main(void)
 {
-     double x = 20;
+     double x = 25;
      int m = 2;
      double res;
 
