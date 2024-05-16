@@ -70,9 +70,13 @@ double mocnina(double mocnenec, int exponent)
 
 int main(void)
 {
-     double x = 25;
-     int m = 2;
+     double x;
+     int m;
      double res;
+     int navrat;
+
+     x = 25;
+     m = 2;
 
      printf("%.4f\n", mocnina(5, 2));
 
