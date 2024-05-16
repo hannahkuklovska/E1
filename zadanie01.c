@@ -5,7 +5,7 @@
 #define OK 1
 #define FAIL 0
 
-double mocnina(double mocnenec, double exponent);
+int mocnina(int mocnenec, int exponent);
 
 char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
@@ -33,7 +33,7 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
      return OK;
 }
 
-double mocnina(double mocnenec, double exponent)
+int mocnina(int mocnenec, int exponent)
 {
 
      if (exponent == 0 || mocnenec == 1.0)
