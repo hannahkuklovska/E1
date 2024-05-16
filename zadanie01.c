@@ -9,6 +9,10 @@ double mocnina(double mocnenec, int exponent);
 
 char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
 {
+
+     double odhad;
+     double dalsi_odhad;
+
      if (x < 0 && m % 2 == 0 || m == 0)
      {
           return FAIL;
@@ -20,8 +24,8 @@ char mta_odmocnina(int m, double x, double *res) // mta odmocnina z x
           return OK;
      }
 
-     double odhad = x / 2.0;
-     double dalsi_odhad;
+     odhad = x / 2.0;
+
      do
      {
           dalsi_odhad = ((m - 1) * odhad + x / mocnina(odhad, m - 1)) / m;
