@@ -76,7 +76,7 @@ int main(void)
      int navrat;
 
      x = 25;
-     m = 2;
+     m = 3;
 
      printf("%d\n", mocnina(10, 2));
 
